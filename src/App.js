@@ -1,19 +1,67 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Logo from './Logo'
+import Project from './Project'
+import CurrentlyLearning from './CurrentlyLearning'
+import ContactForm from './ContactForm'
+import About from './About'
+import PastWork from './PastWork'
+import HowIWork from './HowIWork'
+import TechStack from './TechStack'
+import LastUpdate from './LastUpdate'
 import './App.css';
 
 class App extends Component {
+  // it might be said:
+_CurrentlyWorkingOn() {
+  let arrCurrentlyWorkingOn = [{
+      "id": "1",
+      "name": "Hillside",
+      "type": "Charity",
+      "size": "10+",
+      "content": "A single page website with embedded form, built for Hillside tuition",
+      "image": "hillside.png",
+      "tech": "html, css, js, Bootstrap"
+  },
+  {
+    "id": "2",
+    "name": "A&S",
+    "type": "Business",
+    "size": "-",
+    "content": "A worpress site, built for an import/export company in France",
+    "image": "Image url",
+    "tech": "Worpress, html, css"
+  },
+]
+
+return arrCurrentlyWorkingOn.map(elem => <Project currentWork={elem} key={elem.id} />)
+
+}
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div className='container'>
+        <div className='row'>
+          <Logo />
+        </div>
+        <div className='row'>
+          <h1>CurrentlyWorkingOn</h1>
+        </div>
+        <div className='row'>
+          {this._CurrentlyWorkingOn()}
+        </div>
+        <div className='row'>
+          <h1>CurrentlyLearning</h1>
+        </div>
+        <div className='row'>
+          <CurrentlyLearning />
+        </div>
+          <About />
+          <PastWork />
+          <HowIWork />
+          <TechStack />
+          <LastUpdate />
+          <ContactForm />
+        </div>
     );
   }
 }

@@ -1,0 +1,17 @@
+{
+  "hillside": {
+    "name": "Hillside",
+    "type": "Charity",
+    "size": "10+",
+    "content": "A single page website with embedded form, built for Hillside tuition",
+    "image": "./public/images/hillside.png",
+    "tech": "html, css, js, Bootstrap"
+  },
+  "AandS": {
+    "name": "A&S",
+    "type": "Business",
+    "size": "-",
+    "content": "A worpress site, built for an import/export company in France",
+    "tech": "Worpress, html, css"
+  }
+}

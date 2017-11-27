@@ -8,7 +8,8 @@ import PastWork from './PastWork'
 import HowIWork from './HowIWork'
 import TechStack from './TechStack'
 import LastUpdate from './LastUpdate'
-import './App.css';
+import hillside from './images/hillside.png'
+import aands from './images/a&s.png'
 
 class App extends Component {
   // it might be said:
@@ -19,7 +20,8 @@ _CurrentlyWorkingOn() {
       "type": "Charity",
       "size": "10+",
       "content": "A single page website with embedded form, built for Hillside tuition",
-      "image": "hillside.png",
+      "image": hillside,
+      "imageAlt": "Hillside charity",
       "tech": "html, css, js, Bootstrap"
   },
   {
@@ -28,13 +30,13 @@ _CurrentlyWorkingOn() {
     "type": "Business",
     "size": "-",
     "content": "A worpress site, built for an import/export company in France",
-    "image": "Image url",
+    "image": aands,
+    "imageAlt": "A site for a new business in France",
     "tech": "Worpress, html, css"
   },
 ]
 
 return arrCurrentlyWorkingOn.map(elem => <Project currentWork={elem} key={elem.id} />)
-
 }
 
   render() {

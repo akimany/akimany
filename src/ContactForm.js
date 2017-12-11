@@ -1,12 +1,17 @@
 // it might be said:
-import React, {Component} from 'react'
+import React from 'react'
 
-class ContactForm extends Component {
-  render() {
-    return(
-      <h1>ContactForm</h1>
-    )
-  }
-}
+const ContactForm = () =>
+      <div>
+        <h1>ContactForm</h1>
+        <form>
+          <div className="form-group">
+            <label>Input 1</label>
+            <input type="text" />
+          </div>
+        </form>
+      </div>
+
+
 
 export default ContactForm

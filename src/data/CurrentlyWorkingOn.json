@@ -1,5 +1,7 @@
 {
-  "hillside": {
+  "clients": [
+    {
+    "id": 1,
     "name": "Hillside",
     "type": "Charity",
     "size": "10+",
@@ -7,11 +9,14 @@
     "image": "./public/images/hillside.png",
     "tech": "html, css, js, Bootstrap"
   },
-  "AandS": {
+  {
+    "id": 2,
     "name": "A&S",
     "type": "Business",
     "size": "-",
     "content": "A worpress site, built for an import/export company in France",
+    "image": "./public/images/aands.png",
     "tech": "Worpress, html, css"
   }
+  ]
 }

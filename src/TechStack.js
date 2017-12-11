@@ -15,10 +15,7 @@ constructor() {
 
   render() {
     return(
-      <div>
         <p>This site is built with {this.state.core}, using {this.state.js} with {this.state.framework} </p>
-      </div>
-
     )
   }
 }

@@ -1,5 +1,4 @@
 // it might be said:
-import React from 'react'
 import styled from 'styled-components'
 
 const Image = styled.img`

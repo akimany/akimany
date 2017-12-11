@@ -6,7 +6,7 @@
     "type": "Charity",
     "size": "10+",
     "content": "A single page website with embedded form, built for Hillside tuition",
-    "image": "./public/images/hillside.png",
+    "image": "hillside.png",
     "tech": "html, css, js, Bootstrap"
   },
   {
@@ -15,7 +15,7 @@
     "type": "Business",
     "size": "-",
     "content": "A worpress site, built for an import/export company in France",
-    "image": "./public/images/aands.png",
+    "image": "aands.png",
     "tech": "Worpress, html, css"
   }
   ]

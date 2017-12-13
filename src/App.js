@@ -3,13 +3,13 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Logo from './Logo'
 import Project from './components/Project'
-import Github from './components/Github/Github'
+import Github from './components/github/Github'
 import CurrentlyLearning from './CurrentlyLearning'
 import ContactForm from './ContactForm'
 import About from './About'
-import PastWork from './PastWork'
-import HowIWork from './HowIWork'
-import LastUpdate from './LastUpdate'
+// import PastWork from './PastWork'
+// import HowIWork from './HowIWork'
+// import LastUpdate from './LastUpdate'
 // import hillside from './images/hillside.png'
 // import aands from './images/a&s.png'
 
@@ -34,13 +34,8 @@ class App extends Component {
         <div className='row'>
           <CurrentlyLearning />
         </div>
-        <div className='row'>
           <Github />
-        </div>
           <About />
-          <PastWork />
-          <HowIWork />
-          <LastUpdate />
           <ContactForm />
         </div>
       </Router>

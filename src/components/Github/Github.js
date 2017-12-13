@@ -24,7 +24,6 @@ class Github extends Component {
         throw new Error('Error')
       })
       .then(data => {
-        console.log(typeof data);
         return JSON.stringify(data)
       }
       )

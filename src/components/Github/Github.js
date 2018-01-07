@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const GithubCont = styled.div`
-  border: 5px solid red;
+  border: 1px solid red;
 `
 
 class Github extends Component {
@@ -18,15 +18,19 @@ class Github extends Component {
     fetch('https://api.github.com/users/akimany')
       .then((response) => {
         if(response.ok) {
-          console.log(response);
           return response.json()
         }
         throw new Error('Error')
       })
-      .then(data => {
-        return JSON.stringify(data)
-      }
-      )
+      .then((data) => {
+        let dataArr = []
+        for (let key in data) {
+          if (data.hasOwnProperty(key)) {
+            dataArr.push(data[key])
+          }
+        }
+        return dataArr
+      })
       .then(data => {
         this.setState({data})
       })

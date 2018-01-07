@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Logo from './Logo'
 import Project from './components/Project'
-import Github from './components/github/Github'
+import Github from './components/Github/Github'
 import CurrentlyLearning from './CurrentlyLearning'
 import ContactForm from './ContactForm'
 import About from './About'

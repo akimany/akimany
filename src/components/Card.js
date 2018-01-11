@@ -1,28 +1,43 @@
 import React, { Component } from 'react'
-import Image from './Image'
-import {hillside} from '../images/hillside.png'
-import {aands} from '../images/a&s.png'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import {
+  Card,
+  CardActions,
+  CardHeader,
+  CardMedia,
+  CardTitle,
+  CardText
+} from 'material-ui/Card'
+import FlatButton from 'material-ui/FlatButton'
 // import { Link } from 'react-router-dom'
-{/* It might be said: */}
-class Card extends Component {
+// It might be said:
+
+class CardExampleWithAvatar extends Component {
   render() {
-    const clientImages = [hillside, aands]
-    const {name, content, image} = this.props.clientList
+    const { name, content } = this.props.clientList
     return (
-      <div className='card'>
-      {
-        clientImages.map((elem, index) => {
-          return <Image className='card-img-top' src={elem} />
-        })
-      }
-        <div className='card-body'>
-          <h4 className='card-title'>{name}</h4>
-          <p className='card-text'>{content}</p>
-          <a className='btn btn-primary'>Go somewhere</a>
-        </div>
-      </div>
+      <Card>
+        <CardHeader
+          title="URL Avatar"
+          subtitle="Subtitle"
+          avatar="http://placehold.it/350x350"
+        />
+        <CardMedia
+          overlay={
+            <CardTitle title="Overlay title" subtitle="Overlay subtitle" />
+          }
+        >
+          <img src={'http://localhost:3002/public/images/'} alt="test" />
+        </CardMedia>
+        <CardTitle title={name} subtitle="Card subtitle" />
+        <CardText>{content}</CardText>
+        <CardActions>
+          <FlatButton label="Action1" />
+          <FlatButton label="Action2" />
+        </CardActions>
+      </Card>
     )
   }
 }
 
-export default Card
+export default CardExampleWithAvatar

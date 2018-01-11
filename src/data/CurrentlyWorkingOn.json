@@ -1,22 +1,24 @@
 {
   "clients": [
     {
-    "id": 1,
-    "name": "Hillside",
-    "type": "Charity",
-    "size": "10+",
-    "content": "A single page website with embedded form, built for Hillside tuition",
-    "image": "hillside.png",
-    "tech": "html, css, js, Bootstrap"
-  },
-  {
-    "id": 2,
-    "name": "A&S",
-    "type": "Business",
-    "size": "-",
-    "content": "A worpress site, built for an import/export company in France",
-    "image": "aands.png",
-    "tech": "Worpress, html, css"
-  }
+      "id": 1,
+      "name": "Hillside",
+      "type": "Charity",
+      "size": "10+",
+      "content":
+        "A single page website with embedded form, built for Hillside tuition",
+      "image": "hillside.png",
+      "tech": "html, css, js, Bootstrap"
+    },
+    {
+      "id": 2,
+      "name": "A&S",
+      "type": "Business",
+      "size": "-",
+      "content":
+        "A worpress site, built for an import/export company in France",
+      "image": "a&s.png",
+      "tech": "Worpress, html, css"
+    }
   ]
 }

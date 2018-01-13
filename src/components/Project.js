@@ -10,13 +10,16 @@ class Project extends Component {
   render() {
     const pngs = require.context('../images', true, /\.png$/)
     const keys = pngs.keys()
-    const pngsArray = keys.map(key => pngs.keys())
+    const pngsArray = keys.map(key => pngs(key))
+
     const pngsArrayWithKeys = pngsArray.map((elem, index) => {
       let arr = []
-      arr.push(index)
-      arr.push(elem[index])
+
+      arr.push(index, elem)
+      console.log(preload.clients, arr)
       return arr
     })
+
     console.log(pngsArrayWithKeys)
 
     return (

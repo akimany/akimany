@@ -11,20 +11,22 @@ class Project extends Component {
     const pngs = require.context('../images', true, /\.png$/)
     const keys = pngs.keys()
     const pngsArray = keys.map(key => pngs(key))
+    let arr = []
 
     const pngsArrayWithKeys = pngsArray.map((elem, index) => {
-      let arr = []
-
-      arr.push(index, elem)
-      console.log(preload.clients, arr)
+      arr.push(elem)
+      preload.clients.map(elem => {
+        console.log(arr)
+        if (elem.name === arr.image) {
+          elem.push(arr.image)
+        }
+      })
       return arr
     })
 
-    console.log(pngsArrayWithKeys)
-
+    // it might be said:
     return (
       <div className="col">
-        {keys.map(elem => <img src={`${elem}`} />)}
         {preload.clients.map(elem => <Card clientList={elem} key={elem.id} />)}
       </div>
     )

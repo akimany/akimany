@@ -11,7 +11,6 @@ class Project extends Component {
     const pngs = require.context('../images', true, /\.png$/)
     const keys = pngs.keys()
     const pngsArray = keys.map(key => pngs(key))
-    let arr = []
 
     const smooshJson = preload.clients.map((company, index) => {
       if (
@@ -24,11 +23,7 @@ class Project extends Component {
     })
 
     // it might be said:
-    return (
-      <div className="col test">
-        {smooshJson.map(elem => <Card clientList={elem} key={elem.id} />)}
-      </div>
-    )
+    return smooshJson.map(elem => <Card clientList={elem} key={elem.id} />)
   }
 }
 

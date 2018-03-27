@@ -10,9 +10,6 @@ import Github from './components/Github/Github'
 import CurrentlyLearning from './CurrentlyLearning'
 import ContactForm from './ContactForm'
 import About from './About'
-// import PastWork from './PastWork'
-// import HowIWork from './HowIWork'
-// import LastUpdate from './LastUpdate'
 
 class App extends Component {
   render() {

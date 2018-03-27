@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import { withStyles } from 'material-ui/styles'
 import {
   Card,
   CardActions,
@@ -16,26 +17,27 @@ class CardExampleWithAvatar extends Component {
   render() {
     const { name, content, image } = this.props.clientList
     return (
-      <Card>
-        <CardHeader
-          title="URL Avatar"
-          subtitle="Subtitle"
-          avatar="http://placehold.it/350x350"
-        />
-        <CardMedia
-          overlay={
-            <CardTitle title="Overlay title" subtitle="Overlay subtitle" />
-          }
-        >
-          <img src={image} alt="test" />
-        </CardMedia>
-        <CardTitle title={name} subtitle="Card subtitle" />
-        <CardText>{content}</CardText>
-        <CardActions>
-          <FlatButton label="Action1" />
-          <FlatButton label="Action2" />
-        </CardActions>
-      </Card>
+      <div className="col">
+        <Card>
+          {/*<CardHeader title="URL Avatar" subtitle="Subtitle" avatar={image} />*/}
+          <CardMedia
+            overlay={
+              <CardTitle
+                title={`A screenshot from the ${name} project`}
+                subtitle=""
+              />
+            }
+          >
+            <img src={image} alt={content} />
+          </CardMedia>
+          <CardTitle title={name} />
+          <CardText>{content}</CardText>
+          <CardActions>
+            {/*<FlatButton label="Action1" />
+          <FlatButton label="Action2" /> */}
+          </CardActions>
+        </Card>
+      </div>
     )
   }
 }

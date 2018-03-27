@@ -13,21 +13,20 @@ class Project extends Component {
     const pngsArray = keys.map(key => pngs(key))
     let arr = []
 
-    const pngsArrayWithKeys = pngsArray.map((elem, index) => {
-      arr.push(elem)
-      preload.clients.map(elem => {
-        console.log(arr)
-        if (elem.name === arr.image) {
-          elem.push(arr.image)
-        }
-      })
-      return arr
+    const smooshJson = preload.clients.map((company, index) => {
+      if (
+        company.name.toLowerCase() ===
+        pngsArray[index].split('.')[0].split('/')[3]
+      ) {
+        company['image'] = pngsArray[index]
+      }
+      return company
     })
 
     // it might be said:
     return (
-      <div className="col">
-        {preload.clients.map(elem => <Card clientList={elem} key={elem.id} />)}
+      <div className="col test">
+        {smooshJson.map(elem => <Card clientList={elem} key={elem.id} />)}
       </div>
     )
   }

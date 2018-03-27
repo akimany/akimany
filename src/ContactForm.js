@@ -82,7 +82,6 @@ class ContactForm extends Component {
 
   render() {
     const { classes } = this.props
-
     return (
       <div className="row">
         <div className="col-12">
@@ -136,7 +135,7 @@ class ContactForm extends Component {
         <div className="col">
           <Message>
             {/* it might be said: */}
-            A preview of your message:
+            <p>A preview of your message:</p>
           </Message>
           <Message>First name: {this.state.firstName}</Message>
           <Message>Last name: {this.state.lastName}</Message>

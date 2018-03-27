@@ -14,7 +14,7 @@ import FlatButton from 'material-ui/FlatButton'
 
 class CardExampleWithAvatar extends Component {
   render() {
-    const { name, content } = this.props.clientList
+    const { name, content, image } = this.props.clientList
     return (
       <Card>
         <CardHeader
@@ -27,7 +27,7 @@ class CardExampleWithAvatar extends Component {
             <CardTitle title="Overlay title" subtitle="Overlay subtitle" />
           }
         >
-          <img src={'http://localhost:3002/public/images/'} alt="test" />
+          <img src={image} alt="test" />
         </CardMedia>
         <CardTitle title={name} subtitle="Card subtitle" />
         <CardText>{content}</CardText>

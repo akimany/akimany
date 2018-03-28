@@ -2,9 +2,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const GithubCont = styled.div`
-  border: 1px solid red;
-`
+const GithubCont = styled.div``
 
 class Github extends Component {
   constructor(props) {
@@ -16,13 +14,13 @@ class Github extends Component {
 
   componentDidMount() {
     fetch('https://api.github.com/users/akimany')
-      .then((response) => {
-        if(response.ok) {
+      .then(response => {
+        if (response.ok) {
           return response.json()
         }
         throw new Error('Error')
       })
-      .then((data) => {
+      .then(data => {
         let dataArr = []
         for (let key in data) {
           if (data.hasOwnProperty(key)) {
@@ -32,14 +30,18 @@ class Github extends Component {
         return dataArr
       })
       .then(data => {
-        this.setState({data})
+        // it might be said:
+        const listItems = data.map((elem, index) => {
+          if (elem) {
+            return <li key={index}>{elem}</li>
+          }
+        })
+        this.setState({ data: listItems })
       })
   }
 
   render() {
-      return(
-          <GithubCont>{this.state.data}</GithubCont>
-      )
+    return <GithubCont>{this.state.data}</GithubCont>
   }
 }
 

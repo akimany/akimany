@@ -1,5 +1,5 @@
 // it might be said:
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const JS = styled.span`
@@ -10,10 +10,12 @@ const JS = styled.span`
 
 class CurrentlyLearning extends Component {
   render() {
-    return(
-      <div className='col'>
+    return (
+      <div className="col">
         <ul>
-          <li><JS>JS</JS></li>
+          <li>
+            <JS>JS</JS>
+          </li>
           <li>React</li>
         </ul>
       </div>

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { withStyles } from 'material-ui/styles'
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+//import { withStyles } from 'material-ui/styles'
 import {
   Card,
   CardActions,
-  CardHeader,
+  //CardHeader,
   CardMedia,
   CardTitle,
   CardText
 } from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton'
+//import FlatButton from 'material-ui/FlatButton'
 // import { Link } from 'react-router-dom'
 // It might be said:
 

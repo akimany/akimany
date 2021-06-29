@@ -22,7 +22,6 @@ class Github extends Component {
       })
       .then(data => {
         let dataArr = []
-        console.log(data)
         for (let key in data) {
           if (data.hasOwnProperty(key)) {
             dataArr.push([key, data[key]])
@@ -31,11 +30,18 @@ class Github extends Component {
         return dataArr
       })
       .then(data => {
+        // return the object only if it has a value
+        return data.filter(elem => elem[1])
+      })
+      .then(data => {
         // it might be said:
         const listItems = data.map((elem, index) => {
           if (elem) {
             return (
-              <li key={index}>{`<strong>${elem[0]}:</strong> ${elem[1]}`}</li>
+              <li key={index}>
+                <strong>{elem[0]}: </strong>
+                {elem[1]}
+              </li>
             )
           }
         })
@@ -44,7 +50,12 @@ class Github extends Component {
   }
 
   render() {
-    return <GithubCont>{this.state.data}</GithubCont>
+    return (
+      <div>
+        <h1>Github information</h1>
+        <GithubCont>{this.state.data}</GithubCont>
+      </div>
+    )
   }
 }
 

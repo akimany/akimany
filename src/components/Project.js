@@ -5,8 +5,6 @@ import Card from './Card'
 import preload from '../data/CurrentlyWorkingOn.json'
 
 class Project extends Component {
-  // it might be said:
-
   render() {
     const pngs = require.context('../images', true, /\.png$/)
     const keys = pngs.keys()
@@ -22,7 +20,6 @@ class Project extends Component {
       return company
     })
 
-    // it might be said:
     return smooshJson.map(elem => <Card clientList={elem} key={elem.id} />)
   }
 }

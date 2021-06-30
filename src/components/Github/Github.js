@@ -34,7 +34,6 @@ class Github extends Component {
         return data.filter(elem => elem[1])
       })
       .then(data => {
-        // it might be said:
         const listItems = data.map((elem, index) => {
           if (elem) {
             return (

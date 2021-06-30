@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { withStyles } from 'material-ui/styles'
-import MenuItem from 'material-ui/Menu'
-import TextField from 'material-ui/TextField'
+import { MenuItem } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 
 import Heading1 from './components/generic/Headers'
 

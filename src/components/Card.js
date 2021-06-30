@@ -4,11 +4,12 @@ import React, { Component } from 'react'
 import {
   Card,
   CardActions,
-  //CardHeader,
   CardMedia,
-  CardTitle,
-  CardText
-} from 'material-ui/Card'
+  CardContent
+} from '@material-ui/core'
+import Typography from '@material-ui/core/Typography';
+
+
 //import FlatButton from 'material-ui/FlatButton'
 // import { Link } from 'react-router-dom'
 // It might be said:
@@ -22,7 +23,7 @@ class CardExampleWithAvatar extends Component {
           {/*<CardHeader title="URL Avatar" subtitle="Subtitle" avatar={image} />*/}
           <CardMedia
             overlay={
-              <CardTitle
+              <Typography
                 title={`A screenshot from the ${name} project`}
                 subtitle=""
               />
@@ -30,8 +31,8 @@ class CardExampleWithAvatar extends Component {
           >
             <img src={image} alt={content} />
           </CardMedia>
-          <CardTitle title={name} />
-          <CardText>{content}</CardText>
+          <Typography title={name} gutterBottom variant="h5" component="h2" />
+          <CardContent>{content}</CardContent>
           <CardActions>
             {/*<FlatButton label="Action1" />
           <FlatButton label="Action2" /> */}

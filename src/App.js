@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import { MuiThemeProvider as V0MuiThemeProvider} from '@material-ui/core';
 
 import Logo from './Logo'
 import Project from './components/Project'
@@ -17,7 +15,7 @@ import About from './About'
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+      <V0MuiThemeProvider>
         <Router>
           <div className="container">
             <div className="row">
@@ -40,7 +38,7 @@ class App extends Component {
             <ContactForm classes="test" />
           </div>
         </Router>
-      </MuiThemeProvider>
+      </V0MuiThemeProvider>
     )
   }
 }

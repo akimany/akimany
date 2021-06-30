@@ -11,6 +11,9 @@ class Project extends Component {
     const pngsArray = keys.map(key => pngs(key))
 
     const smooshJson = preload.clients.map((company, index) => {
+      console.log(index)
+      console.log(`pngsArray[index]: `, pngsArray[index])
+
       if (
         company.name.toLowerCase() ===
         pngsArray[index].split('.')[0].split('/')[3]
